@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>PROJECT - Survey Form</title>
+        <title>Survey Form Project</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <h1 id="title">Survey Form Project</h1>
-        <p id="description">Thank you in advanced for filling out our survey.</p>
+        <h1 id="title">Software Developer Job Application</h1>
+        <p id="description">Please fill out the following application to be considered for the Software Developer position.</p>
+
         <form id="survey-form">
+            <fieldset id="applicant-info">
+                <legend>Personal Information</legend>
+                <label for="name" id="name-label">Name<input id="name" name="name" type="text" required placeholder="Enter your name..."/></label>
+                <label for="email" id="email-label">Email<input id="email" name="email" type="email" placeholder="Enter your email..."/></label>
+                <label for="number" id="number-label">Age<input id="number" name="number" type="number" placeholder="Enter your age..." min="21" max="64" required/></label>
+            </fieldset>
             <fieldset>
-                <label id="name-label" for="name">Name<input id="name" name="name" type="text" placeholder="Enter your name" required></label>
-                <label id="email-label" for="email">Email<input id="email" name="email" type="email" placeholder="Enter your email" required/></label>
-                <label id="number-label" for="age">Age (Optional)<input id="age" name="age" type="number" min="13" max="120"/></label>
-                <label>Are you currently employed?
-                    <select id="dropdown">
-                        <option>Yes</option>
-                        <option>No</option>
-                    </select>
+                <legend>Job Qualifications</legend>
+                <label>Years of Experience
+                <select>
+                    <option></option>
+                    <option>0</option>
+                    <option>0-1</option>
+                    <option>2-5</option>
+                    <option>5 or more</option>
+                </select>
+                </label>
+                <label>Level of Experience
+                    <label><input id="beginner-level" name="exp-level" type="radio" class="inline" required/> Beginner</label>
+                    <label><input id="intermediate-level" name="exp-level" type="radio" class="inline" required/> Intermediate</label>
+                    <label><input id="advanced-level" name="exp-level" type="radio" class="inline" required/> Advanced</label>
+                    <label><input id="expert-level" name="exp-level" type="radio" class="inline" required/> Expert</label>
+                </label>
+                <label>Areas of Interest
+                    <label><input id="beginner-level" name="exp-level" type="radio" class="inline" required/> Beginner</label>
+                    <label><input id="intermediate-level" name="exp-level" type="radio" class="inline" required/> Intermediate</label>
+                    <label><input id="advanced-level" name="exp-level" type="radio" class="inline" required/> Advanced</label>
+                    <label><input id="expert-level" name="exp-level" type="radio" class="inline" required/> Expert</label>
                 </label>
             </fieldset>
             <fieldset>
-                <legend>What type of operating system do you use?</legend>
-                <label for="windows"><input id="windows" class="inline" name="os-selection" type="radio" checked/>Windows</label>
-                <label for="ios"><input id="ios" class="inline" name="os-selection" type="radio"/>iOS</label>
-                <label for="other"><input id="other" class="inline" type="radio" name="os-selection"/>Other</label>
+
             </fieldset>
-            <fieldset>
-                <legend>What areas of programming are you interested in?</legend>
-                <label for="front-end"><input id="front-end" class="inline" value="1" type="checkbox"/>Front End</label>
-                <label for="back-end"><input id="back-end" class="inline" value="2" type="checkbox"/>Back End</label>
-                <label for="devops"><input id="devops" class="inline" value="3" type="checkbox"/>DevOps</label>
-            </fieldset>
-            <fieldset>
-                <textarea></textarea>
-            </fieldset>
-            <input type="submit" id="submit" value="Submit">
         </form>
     </body>
 </html>
