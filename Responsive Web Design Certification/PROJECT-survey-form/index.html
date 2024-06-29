@@ -8,41 +8,49 @@
     <body>
         <h1 id="title">Software Developer Job Application</h1>
         <p id="description">Please fill out the following application to be considered for the Software Developer position.</p>
-
         <form id="survey-form">
             <fieldset id="applicant-info">
                 <legend>Personal Information</legend>
                 <label for="name" id="name-label">Name<input id="name" name="name" type="text" required placeholder="Enter your name..."/></label>
-                <label for="email" id="email-label">Email<input id="email" name="email" type="email" placeholder="Enter your email..."/></label>
+                <label for="email" id="email-label">Email<input id="email" name="email" type="email" required placeholder="Enter your email..."/></label>
                 <label for="number" id="number-label">Age<input id="number" name="number" type="number" placeholder="Enter your age..." min="21" max="64" required/></label>
             </fieldset>
             <fieldset>
                 <legend>Job Qualifications</legend>
-                <label>Years of Experience
-                <select>
-                    <option></option>
-                    <option>0</option>
-                    <option>0-1</option>
-                    <option>2-5</option>
-                    <option>5 or more</option>
-                </select>
-                </label>
-                <label>Level of Experience
-                    <label><input id="beginner-level" name="exp-level" type="radio" class="inline" required/> Beginner</label>
-                    <label><input id="intermediate-level" name="exp-level" type="radio" class="inline" required/> Intermediate</label>
-                    <label><input id="advanced-level" name="exp-level" type="radio" class="inline" required/> Advanced</label>
-                    <label><input id="expert-level" name="exp-level" type="radio" class="inline" required/> Expert</label>
-                </label>
-                <label>Areas of Interest
-                    <label><input id="beginner-level" name="exp-level" type="radio" class="inline" required/> Beginner</label>
-                    <label><input id="intermediate-level" name="exp-level" type="radio" class="inline" required/> Intermediate</label>
-                    <label><input id="advanced-level" name="exp-level" type="radio" class="inline" required/> Advanced</label>
-                    <label><input id="expert-level" name="exp-level" type="radio" class="inline" required/> Expert</label>
-                </label>
+                <section>
+                    <label id="answer-label">Years of Experience</label>
+                    <select id="dropdown">
+                        <option></option>
+                        <option>0</option>
+                        <option>0-1</option>
+                        <option>2-5</option>
+                        <option>5 or more</option>
+                    </select>
+                </section>
+                <section>
+                    <label id="answer-label">Level of Experience</label>
+                        <label><input id="beginner-level" value="0" name="exp-level" type="radio" class="inline" required/> Beginner</label>
+                        <label><input id="intermediate-level" value="1" name="exp-level" type="radio" class="inline" required/> Intermediate</label>
+                        <label><input id="advanced-level" value="2" name="exp-level" type="radio" class="inline" required/> Advanced</label>
+                        <label><input id="expert-level" value="3" name="exp-level" type="radio" class="inline" required/> Expert</label>
+                </section>
+                <section>
+                    <label id="answer-label">Areas of Interest</label>
+                        <label><input id="general" value="1" type="checkbox" class="inline" required/> General</label>
+                        <label><input id="devops" value="2" type="checkbox" class="inline" required/> DevOps</label>
+                        <label><input id="ai" value="3" type="checkbox" class="inline" required/> Artificial Intelligence</label>
+                        <label><input id="ml" value="4" type="checkbox" class="inline" required/> Machine Learning</label>
+                        <label><input id="cloud" value="5" type="checkbox" class="inline" required/> Cloud Architecture</label>
+                </section>
             </fieldset>
             <fieldset>
-
+                <legend>More Information</legend>
+                <label>Tell us about yourself</label>
+                <textarea name="additional-info" rows="5" cols="30" placeholder="Enter additional information here..."></textarea>
+                <label>Upload your Resume</label><input id="profile-picture" type="file" name="file" />
             </fieldset>
+
+            <input type="submit" value="Submit" id="submit"/>
         </form>
     </body>
 </html>
