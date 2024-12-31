@@ -1,0 +1,42 @@
+body {
+    background-color: ivory;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+main {
+    background-color: #D3D3D3;
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+#title {
+    text-align:center;
+}
+
+#img-div {
+    background-color: #C0C2C9;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    display: block;
+    
+    
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+ 
+
+ul {
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 2.0;
+}
